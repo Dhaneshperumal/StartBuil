@@ -8,6 +8,7 @@ import {
 } from '../../services/api';
 import { formatDate, formatTime } from '../../utils/helpers';
 import { addEventHandler } from '../../services/websocket';
+import TransportationTracker from './TransportationTracker';
 
 const TransportationDashboard = () => {
   const [loading, setLoading] = useState(true);
@@ -298,6 +299,15 @@ const TransportationDashboard = () => {
             >
               <i className="fas fa-map-marked-alt me-2"></i>
               Maps
+            </button>
+          </li>
+          <li className="nav-item">
+            <button 
+              className={`nav-link ${activeTab === 'tracker' ? 'active' : ''}`}
+              onClick={() => handleTabChange('tracker')}
+            >
+              <i className="fas fa-location-arrow me-2"></i>
+              Tracker
             </button>
           </li>
         </ul>
@@ -630,6 +640,24 @@ const TransportationDashboard = () => {
           </div>
         )}
       </div>
+      
+      {/* Tracker Tab */}
+      {activeTab === 'tracker' && (
+        <div className="tab-pane active">
+          <div className="card">
+            <div className="card-body">
+              <h3>Transportation Tracker</h3>
+              <p className="lead">
+                Real-time tracking and management of Smart City transportation assets.
+              </p>
+              
+              <div className="transport-tracker-container mt-4">
+                <TransportationTracker />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

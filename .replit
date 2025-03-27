@@ -27,8 +27,16 @@ task = "packager.installForAll"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd backend && npm install && node server.js"
+args = "cd backend && node simple-server.js"
 waitForPort = 5000
 
 [deployment]
-run = ["sh", "-c", "cd backend && npm install && node server.js"]
+run = ["sh", "-c", "cd backend && node simple-server.js"]
+
+[[ports]]
+localPort = 5000
+externalPort = 5000
+
+[[ports]]
+localPort = 8000
+externalPort = 80

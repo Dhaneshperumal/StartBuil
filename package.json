@@ -1,9 +1,11 @@
 {
   "name": "workspace",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "/src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+  "start": "cd frontend && npm start",
+  "build": "cd frontend && npm run build"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +27,7 @@
     "react-dom": "^19.0.0",
     "react-feather": "^2.0.10",
     "react-router-dom": "^7.4.0",
+    "react-scripts": "^5.0.1",
     "ws": "^8.18.1"
   }
 }

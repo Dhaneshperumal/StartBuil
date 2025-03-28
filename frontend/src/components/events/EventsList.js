@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getEvents } from '../../services/api';
 import { formatDate, formatTime } from '../../utils/helpers';
-import { ReactComponent as EmptyStateIcon } from 'https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/icons/calendar.svg';
+import { Calendar } from 'react-feather';
+
 
 const EventsList = () => {
   const [events, setEvents] = useState([]);
@@ -436,7 +437,7 @@ const EventsList = () => {
       ) : (
         <div className="empty-state mt-5">
           <div className="empty-state-icon">
-            <EmptyStateIcon />
+            <Calender size={48}/>
           </div>
           <h3>No events found</h3>
           <p>No events match your current filters</p>

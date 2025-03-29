@@ -4,6 +4,7 @@ import { getEvents } from '../../services/api';
 import { formatDate, formatTime } from '../../utils/helpers';
 import { Calendar } from 'react-feather';
 
+
 const EventsList = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -436,7 +437,7 @@ const EventsList = () => {
       ) : (
         <div className="empty-state mt-5">
           <div className="empty-state-icon">
-            <Calendar size={48} />
+            <Calender size={48}/>
           </div>
           <h3>No events found</h3>
           <p>No events match your current filters</p>

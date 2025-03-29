@@ -25,13 +25,15 @@ const connectMongoDB = async () => {
 // MySQL connection pool
 const mysqlPool = mysql.createPool({
   host: process.env.MYSQL_HOST || 'localhost',
+  port: process.env.MYSQL_PORT || 3307,     
   user: process.env.MYSQL_USER || 'root',
-  password: process.env.MYSQL_PASSWORD || 'password',
+  password: process.env.MYSQL_PASSWORD || '4563',
   database: process.env.MYSQL_DATABASE || 'smartcity',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
 });
+
 
 // Test MySQL connection
 const testMySQLConnection = async () => {

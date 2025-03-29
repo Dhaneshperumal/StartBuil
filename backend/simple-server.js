@@ -539,6 +539,11 @@ async function startServer() {
   });
 }
 
+server.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+  testDatabaseConnection(); // <-- Call the function here!
+});
+
 startServer().catch(err => {
   console.error('Server startup error:', err);
 });

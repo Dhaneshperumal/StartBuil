@@ -1,0 +1,190 @@
+.transportation-dashboard-container {
+    padding: 20px;
+  }
+  
+  .transportation-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .transportation-header h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .transportation-header .lead {
+    font-size: 1.25rem;
+    color: #666;
+  }
+  
+  .transportation-loading {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .alert {
+    margin-bottom: 20px;
+  }
+  
+  .transportation-overview {
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .transportation-icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .transportation-status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .status-success {
+    color: #28a745;
+  }
+  
+  .status-warning {
+    color: #ffc107;
+  }
+  
+  .status-danger {
+    color: #dc3545;
+  }
+  
+  .status-text {
+    margin-left: 5px;
+  }
+  
+  .status-message {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .transportation-tabs {
+    margin-top: 20px;
+  }
+  
+  .nav-tabs {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .nav-link {
+    border: none;
+  }
+  
+  .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .transportation-tab-content {
+    margin-top: 20px;
+  }
+  
+  .quick-action-card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f8f9fa;
+    margin-bottom: 20px;
+  }
+  
+  .quick-action-card .icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .schedule-table-container {
+    overflow-x: auto;
+  }
+  
+  .schedule-table {
+    width: 100%;
+  }
+  
+  .schedule-table th, .schedule-table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .schedule-table th {
+    background-color: #f8f9fa;
+  }
+  
+  .schedule-table .route-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .map-card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f8f9fa;
+    margin-bottom: 20px;
+  }
+  
+  .map-card-icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .offline-maps-section {
+    margin-top: 20px;
+  }
+  
+  .transport-tracker-container {
+    margin-top: 20px;
+  }
+  
+  .list-group-item {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .list-group-item.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .route-line {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .spinner-border {
+    width: 1.5rem;
+    height: 1.5rem;
+  }

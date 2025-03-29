@@ -1,0 +1,137 @@
+.user-management-container {
+    padding: 20px;
+  }
+  
+  .user-management-header {
+    margin-bottom: 20px;
+  }
+  
+  .users-loading {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .card {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  .table {
+    margin-bottom: 0;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table-primary {
+    background-color: #cce5ff !important;
+  }
+  
+  .status-indicator {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  .status-active {
+    background-color: #28a745;
+  }
+  
+  .status-inactive {
+    background-color: #ffc107;
+  }
+  
+  .status-suspended {
+    background-color: #dc3545;
+  }
+  
+  .status-pending {
+    background-color: #17a2b8;
+  }
+  
+  .role-checkboxes {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .avatar-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+  
+  .preferences-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .preference-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .btn-outline-secondary {
+    margin-left: 10px;
+  }
+  
+  .pagination-info {
+    margin-top: 10px;
+  }
+  
+  .pagination .page-item.disabled .page-link {
+    pointer-events: none;
+    color: #6c757d;
+  }
+  
+  .pagination .page-link {
+    cursor: pointer;
+  }
+  
+  .no-user-selected {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .user-profile-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-profile-info {
+    margin-left: 15px;
+  }
+  
+  .user-role-badges .badge {
+    margin-right: 5px;
+  }
+  
+  .additional-actions {
+    margin-top: 20px;
+  }
+  
+  .spinner-border {
+    width: 2rem;
+    height: 2rem;
+  }

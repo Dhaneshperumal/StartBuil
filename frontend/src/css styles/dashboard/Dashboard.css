@@ -1,0 +1,250 @@
+/* Dashboard Container */
+.dashboard-container {
+    padding: 20px;
+  }
+  
+  /* Dashboard Header */
+  .dashboard-header {
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+  
+  .dashboard-header .dashboard-subtitle {
+    font-size: 1.25rem;
+    color: #6c757d; /* Muted color for subtitle */
+  }
+  
+  /* Connection Status */
+  .connection-status {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .connection-status.connected {
+    background-color: #d4edda; /* Light green for connected */
+    color: #155724; /* Dark green text */
+  }
+  
+  .connection-status.disconnected {
+    background-color: #f8d7da; /* Light red for disconnected */
+    color: #721c24; /* Dark red text */
+  }
+  
+  /* Quick Actions Section */
+  .quick-actions-section {
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Quick Action Card */
+  .quick-action-card {
+    text-align: center;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    transition: transform 0.2s;
+  }
+  
+  .quick-action-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .quick-action-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Dashboard Content */
+  .dashboard-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Dashboard Card */
+  .dashboard-card {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 1 1 100%; /* Full width on small screens */
+  }
+  
+  .card-header {
+    background-color: #f8f9fa; /* Light background for header */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-header h2 {
+    margin: 0;
+  }
+  
+  .view-all-link {
+    color: #007bff; /* Primary color for links */
+  }
+  
+  /* Attractions and Events List */
+  .attractions-list,
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .attraction-item,
+  .event-item {
+    display: flex;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .attraction-image,
+  .event-date {
+    flex: 0 0 150px; /* Fixed width for images */
+  }
+  
+  .attraction-image img,
+  .event-date img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .placeholder-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #f1f1f1;
+    color: #6c757d;
+  }
+  
+  .attraction-details,
+  .event-details {
+    padding: 10px;
+    flex: 1;
+  }
+  
+  .attraction-name,
+  .event-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .attraction-rating,
+  .event-meta {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .attraction-rating .stars,
+  .event-meta .event-category {
+    margin-right: 5px;
+  }
+  
+  /* Transportation Status */
+  .transportation-status {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .transport-type-card {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .transport-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .transport-status {
+    margin-top: 5px;
+  }
+  
+  .transport-status.operational {
+    color: #28a745; /* Green for operational */
+  }
+  
+  .transport-status.disrupted {
+    color: #dc3545; /* Red for disrupted */
+  }
+  
+  /* Tours List */
+  .tours-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .tour-item {
+    display: flex;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .tour-image {
+    flex: 0 0 150px; /* Fixed width for images */
+  }
+  
+  .tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .tour-details {
+    padding: 10px;
+    flex: 1;
+  }
+  
+  .tour-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .tour-meta {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  /* Empty State */
+  .empty-state {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .dashboard-content {
+      flex-direction: column;
+    }
+  
+    .dashboard-card {
+      flex: 1 1 100%; /* Full width on small screens */
+    }
+  }

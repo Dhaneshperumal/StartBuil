@@ -1,0 +1,180 @@
+/* Events List Container */
+.events-container {
+    padding: 20px;
+  }
+  
+  /* Header */
+  .events-header {
+    margin-bottom: 20px;
+  }
+  
+  .events-header h1 {
+    font-size: 2rem;
+  }
+  
+  .events-header .lead {
+    font-size: 1.25rem;
+    color: #6c757d; /* Muted color for subtitle */
+  }
+  
+  /* Filters */
+  .filters-container {
+    margin-bottom: 20px;
+  }
+  
+  .filters-container .form-label {
+    font-weight: bold;
+  }
+  
+  .filters-container .form-select {
+    width: 100%;
+  }
+  
+  /* Events List */
+  .events-list-container {
+    margin-top: 20px;
+  }
+  
+  .events-count {
+    margin-bottom: 10px;
+  }
+  
+  .event-card {
+    display: flex;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+  }
+  
+  .event-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .event-date-box {
+    background-color: #f8f9fa; /* Light background for date box */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .event-month {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .event-day {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .event-time {
+    font-size: 0.9rem;
+    color: #6c757d; /* Muted color for time */
+  }
+  
+  .event-content {
+    padding: 10px;
+    flex: 1;
+  }
+  
+  .event-image {
+    flex: 0 0 150px; /* Fixed width for images */
+  }
+  
+  .event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .placeholder-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #f1f1f1;
+    color: #6c757d;
+  }
+  
+  .featured-badge {
+    background-color: #ffc107; /* Yellow for featured badge */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  /* Event Details */
+  .event-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .event-meta {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .event-category {
+    margin-right: 10px;
+  }
+  
+  .event-description {
+    margin-top: 10px;
+  }
+  
+  /* Pagination */
+  .pagination-container {
+    margin-top: 20px;
+  }
+  
+  .pagination {
+    justify-content: center;
+  }
+  
+  .page-item.disabled .page-link {
+    pointer-events: none;
+    color: #6c757d; /* Muted color for disabled items */
+  }
+  
+  .page-link {
+    cursor: pointer;
+  }
+  
+  /* Empty State */
+  .empty-state {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Loading and Error States */
+  .events-loading {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .event-card {
+      flex-direction: column;
+    }
+  
+    .event-image {
+      flex: 0 0 auto; /* Allow image to take its natural size */
+    }
+  
+    .event-content {
+      padding: 15px;
+    }
+  }

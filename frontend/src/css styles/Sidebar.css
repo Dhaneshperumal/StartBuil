@@ -1,0 +1,137 @@
+/* Sidebar styles */
+.sidebar {
+    width: 250px; /* Set the width of the sidebar */
+    background-color: #343a40; /* Dark background color */
+    color: #fff; /* Text color */
+    transition: transform 0.3s ease; /* Smooth transition for opening/closing */
+    transform: translateX(-100%); /* Initially hidden */
+    position: fixed; /* Fixed position */
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height */
+    z-index: 1000; /* Ensure it is above other content */
+  }
+  
+  .sidebar.open {
+    transform: translateX(0); /* Show the sidebar */
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-100%); /* Hide the sidebar */
+  }
+  
+  .sidebar-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+  }
+  
+  .user-avatar img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff; /* Placeholder background color */
+    color: #fff; /* Placeholder text color */
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .user-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-name {
+    font-weight: bold;
+  }
+  
+  .user-role {
+    font-size: 0.9rem;
+    color: #ccc; /* Lighter color for role */
+  }
+  
+  .sidebar-nav {
+    padding: 10px 0;
+  }
+  
+  .nav {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  .nav-item {
+    margin: 0; /* Remove margin */
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.2s; /* Smooth background transition */
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+  }
+  
+  .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2); /* Active link background */
+  }
+  
+  .nav-icon {
+    margin-right: 10px; /* Space between icon and text */
+  }
+  
+  .nav-header {
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #ccc; /* Lighter color for headers */
+  }
+  
+  .nav-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1); /* Divider color */
+    margin: 10px 0; /* Space around divider */
+  }
+  
+  .sidebar-footer {
+    padding: 15px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #ccc; /* Lighter color for footer */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px; /* Adjust width for smaller screens */
+    }
+  
+    .user-avatar {
+      width: 40px;
+      height: 40px;
+    }
+  }

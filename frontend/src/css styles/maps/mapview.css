@@ -1,0 +1,93 @@
+/* Map View Container */
+.map-container {
+    padding: 20px;
+  }
+  
+  /* Map Header */
+  .map-header {
+    margin-bottom: 20px;
+  }
+  
+  .map-header h1 {
+    font-size: 2rem;
+  }
+  
+  .map-header .lead {
+    font-size: 1.25rem;
+    color: #6c757d; /* Muted color for subtitle */
+  }
+  
+  /* Loading and Error States */
+  .map-loading {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  /* Map Controls */
+  .map-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .layer-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .layer-controls label {
+    margin-right: 10px;
+  }
+  
+  .btn-group .btn {
+    margin-right: 5px;
+  }
+  
+  /* Map Legend */
+  .map-legend {
+    position: relative;
+  }
+  
+  .legend-card {
+    margin-top: 10px;
+  }
+  
+  /* Map View */
+  .map-view {
+    width: 100%;
+    height: 500px; /* Set a fixed height for the map */
+    border: 1px solid #dee2e6; /* Light border for the map */
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  /* Offline Maps Notice */
+  .offline-maps-notice {
+    margin-top: 20px;
+  }
+  
+  .offline-maps-notice .card {
+    background-color: #f8f9fa; /* Light background for notice */
+    border: 1px solid #dee2e6; /* Light border for card */
+  }
+  
+  .offline-maps-notice .card-title {
+    font-weight: bold;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .map-header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .map-view {
+      height: 300px; /* Adjust height for smaller screens */
+    }
+  }

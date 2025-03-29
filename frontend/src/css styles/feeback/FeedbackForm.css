@@ -1,0 +1,189 @@
+/* Feedback Form Container */
+.feedback-container {
+    padding: 20px;
+  }
+  
+  /* Feedback Header */
+  .feedback-header {
+    margin-bottom: 20px;
+  }
+  
+  .feedback-header h1 {
+    font-size: 2rem;
+  }
+  
+  .feedback-header .lead {
+    font-size: 1.25rem;
+    color: #6c757d; /* Muted color for subtitle */
+  }
+  
+  /* Form Type Selector */
+  .form-type-selector {
+    margin-bottom: 20px;
+  }
+  
+  .btn-group .btn {
+    width: 100%;
+  }
+  
+  /* Alert Messages */
+  .alert {
+    margin-bottom: 20px;
+  }
+  
+  /* Feedback Form Styles */
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .card-header {
+    background-color: #007bff; /* Primary color for header */
+    color: white;
+  }
+  
+  .card-header h3 {
+    margin: 0;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group-text {
+    background-color: #e9ecef; /* Light background for input group */
+  }
+  
+  .form-control {
+    border-radius: 0.25rem;
+  }
+  
+  /* Rating Styles */
+  .star-rating {
+    display: flex;
+    margin-top: 5px;
+  }
+  
+  .star {
+    cursor: pointer;
+    color: #ffcc00; /* Gold color for stars */
+  }
+  
+  .star.active {
+    color: #ffcc00; /* Gold color for active stars */
+  }
+  
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Previous Submissions */
+  .feedback-list {
+    margin-top: 20px;
+  }
+  
+  .feedback-item {
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px 0;
+  }
+  
+  .feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .feedback-date {
+    font-size: 0.9rem;
+    color: #6c757d; /* Muted color for date */
+  }
+  
+  .status-badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .status-pending {
+    background-color: #ffc107; /* Yellow for pending */
+    color: white;
+  }
+  
+  .status-resolved {
+    background-color: #28a745; /* Green for resolved */
+    color: white;
+  }
+  
+  /* Help Information */
+  .card {
+    margin-top: 20px;
+  }
+  
+  .card-header.bg-info {
+    background-color: #17a2b8; /* Info color for help card */
+    color: white;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  /* Loading and Error States */
+  .feedback-loading {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  /* Empty State */
+  .no-feedback {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .feedback-container {
+      padding: 10px;
+    }
+  
+    .feedback-header h1 {
+      font-size: 1.5rem;
+    }
+  }

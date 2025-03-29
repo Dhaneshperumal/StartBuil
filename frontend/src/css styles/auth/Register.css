@@ -1,0 +1,135 @@
+/* Auth Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light background color */
+  }
+  
+  /* Auth Card */
+  .auth-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px; /* Max width for the card */
+  }
+  
+  /* Auth Header */
+  .auth-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .auth-header .logo {
+    font-size: 3rem;
+    color: #007bff; /* Primary color for logo */
+  }
+  
+  .auth-header h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .auth-header p {
+    color: #6c757d; /* Muted color for subtitle */
+  }
+  
+  /* Alert */
+  .alert {
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styles */
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group-text {
+    background-color: #e9ecef; /* Light background for input group */
+  }
+  
+  .form-control {
+    border-radius: 0.25rem;
+  }
+  
+  /* Password Strength Indicator */
+  .progress {
+    height: 5px;
+  }
+  
+  .password-strength-text {
+    margin-left: 10px;
+  }
+  
+  /* Button Styles */
+  .btn {
+    border-radius: 0.25rem;
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .social-login .btn {
+    border-radius: 0.25rem;
+  }
+  
+  /* Divider */
+  .auth-divider {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .auth-divider span {
+    background-color: #f8f9fa; /* Light background for divider */
+    padding: 0 10px;
+  }
+  
+  /* Footer */
+  .auth-footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .auth-footer p {
+    color: #6c757d; /* Muted color for footer text */
+  }
+  
+  /* Loading Spinner */
+  .spinner-border {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  /* Terms Text */
+  .terms-text {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .terms-text a {
+    color: #007bff; /* Link color */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .auth-card {
+      padding: 20px;
+    }
+  
+    .auth-header h1 {
+      font-size: 1.25rem;
+    }
+  }

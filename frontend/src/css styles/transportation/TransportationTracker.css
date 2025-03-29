@@ -1,0 +1,115 @@
+.transportation-tracker {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .connection-status {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .status-connected {
+    color: #28a745; /* Green for connected */
+  }
+  
+  .status-disconnected {
+    color: #dc3545; /* Red for disconnected */
+  }
+  
+  .error-message {
+    color: #dc3545; /* Red for errors */
+    margin-bottom: 20px;
+  }
+  
+  .transportation-list {
+    margin-bottom: 20px;
+  }
+  
+  .transportation-list h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .transportation-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .transportation-list li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .transportation-list li:hover {
+    background-color: #e9ecef; /* Light gray on hover */
+  }
+  
+  .transportation-list li.selected {
+    background-color: #007bff; /* Blue for selected */
+    color: white;
+  }
+  
+  .transport-status {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .transport-location {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .location-update-form {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .location-update-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }

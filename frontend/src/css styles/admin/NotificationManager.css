@@ -1,0 +1,171 @@
+/* Notification Manager Container */
+.notification-manager-container {
+    padding: 20px;
+  }
+  
+  /* Header */
+  .notification-manager-header {
+    margin-bottom: 20px;
+  }
+  
+  .notification-manager-header h1 {
+    font-size: 2rem;
+  }
+  
+  .notification-manager-header .lead {
+    font-size: 1.25rem;
+  }
+  
+  /* Error Message */
+  .alert {
+    margin-bottom: 20px;
+  }
+  
+  /* Notifications List Panel */
+  .card {
+    border: 1px solid #dee2e6;
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+  }
+  
+  .notification-filters {
+    margin-bottom: 20px;
+  }
+  
+  .notification-filters .input-group {
+    margin-bottom: 10px;
+  }
+  
+  .notification-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .notification-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .notification-item.active {
+    background-color: #e9ecef;
+  }
+  
+  .notification-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+  
+  .notification-content {
+    flex: 1;
+  }
+  
+  .notification-title {
+    font-weight: bold;
+  }
+  
+  .notification-time {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .notification-excerpt {
+    color: #6c757d;
+  }
+  
+  /* Notification Composer */
+  .notification-composer {
+    padding: 20px;
+  }
+  
+  .notification-composer .form-label {
+    font-weight: bold;
+  }
+  
+  .notification-preview {
+    margin-top: 20px;
+  }
+  
+  .notification-preview-card {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .notification-preview-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .notification-preview-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+  
+  .notification-preview-title {
+    font-weight: bold;
+  }
+  
+  .notification-preview-body {
+    margin-top: 10px;
+  }
+  
+  .notification-preview-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  /* Additional Data Fields */
+  .additional-data-fields {
+    margin-top: 10px;
+  }
+  
+  .additional-data-fields .row {
+    align-items: center;
+  }
+  
+  /* Buttons */
+  .btn-group-sm .btn {
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .btn-outline-danger {
+    border-color: #dc3545;
+  }
+  
+  .btn-outline-secondary {
+    border-color: #6c757d;
+  }
+  
+  /* Loading State */
+  .notifications-loading {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .notification-manager-container {
+      padding: 10px;
+    }
+  
+    .notification-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .notification-icon {
+      margin-bottom: 5px;
+    }
+  }

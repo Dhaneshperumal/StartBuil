@@ -1,0 +1,241 @@
+.prt-tracking-container {
+    padding: 20px;
+  }
+  
+  .prt-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .prt-header h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .prt-header .lead {
+    font-size: 1.25rem;
+    color: #666;
+  }
+  
+  .prt-loading {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .alert {
+    margin-bottom: 20px;
+  }
+  
+  .prt-content {
+    display: flex;
+  }
+  
+  .prt-sidebar {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .prt-status {
+    margin-bottom: 20px;
+  }
+  
+  .prt-status .status-container {
+    margin-bottom: 15px;
+  }
+  
+  .status-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .status-label {
+    font-weight: bold;
+  }
+  
+  .status-value {
+    font-size: 1.2rem;
+  }
+  
+  .btn {
+    margin-top: 10px;
+  }
+  
+  .routes-selector {
+    margin-bottom: 20px;
+  }
+  
+  .list-group-item {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .list-group-item.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .route-color-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .stops-list {
+    margin-bottom: 20px;
+  }
+  
+  .stops-list .list-group-item {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .stops-list .list-group-item.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .stop-arrivals {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .arrival-info {
+    margin-bottom: 20px;
+  }
+  
+  .arrival-stop {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .arrival-time {
+    font-size: 1.2rem;
+  }
+  
+  .time-value {
+    font-weight: bold;
+  }
+  
+  .time-details {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .map-container {
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .map-legend {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .legend-icon {
+    margin-right: 5px;
+  }
+  
+  .vehicle-icon {
+    font-size: 1.2rem;
+  }
+  
+  .stop-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #007bff;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .legend-line {
+    width: 20px;
+    height: 2px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .vehicle-list {
+    margin-bottom: 20px;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  .table {
+    margin-bottom: 20px;
+  }
+  
+  .table th, .table td {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .table th {
+    font-weight: bold;
+  }
+  
+  .table td {
+    font-size: 0.9rem;
+  }
+  
+  .badge {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .bg-success {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .bg-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .text-success {
+    color: #28a745;
+  }
+  
+  .text-danger {
+    color: #dc3545;
+  }
+  
+  .text-muted {
+    color: #6c757d;
+  }

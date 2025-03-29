@@ -1,0 +1,161 @@
+/* Attractions List Container */
+.attractions-container {
+    padding: 20px;
+  }
+  
+  /* Header */
+  .attractions-header {
+    margin-bottom: 20px;
+  }
+  
+  .attractions-header h1 {
+    font-size: 2rem;
+  }
+  
+  .attractions-header .lead {
+    font-size: 1.25rem;
+  }
+  
+  /* Filters */
+  .filters-container {
+    margin-bottom: 20px;
+  }
+  
+  .filters-container .form-label {
+    font-weight: bold;
+  }
+  
+  .filters-container .form-select {
+    width: 100%;
+  }
+  
+  /* Attractions Grid */
+  .attractions-grid {
+    margin-top: 20px;
+  }
+  
+  .attraction-card {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .attraction-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .attraction-image {
+    position: relative;
+  }
+  
+  .attraction-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .placeholder-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #f1f1f1;
+    color: #6c757d;
+  }
+  
+  .featured-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffc107; /* Yellow for featured badge */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .attraction-category .badge {
+    margin-top: 5px;
+  }
+  
+  /* Card Body */
+  .card-body {
+    padding: 15px;
+  }
+  
+  .attraction-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .attraction-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .stars {
+    color: #ffcc00; /* Gold color for stars */
+  }
+  
+  .attraction-price {
+    margin-top: 10px;
+  }
+  
+  .attraction-description {
+    margin-top: 10px;
+  }
+  
+  /* Footer */
+  .attraction-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  /* Empty State */
+  .empty-state {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Pagination */
+  .pagination-container {
+    margin-top: 20px;
+  }
+  
+  .pagination {
+    justify-content: center;
+  }
+  
+  .page-item.disabled .page-link {
+    pointer-events: none;
+    color: #6c757d; /* Muted color for disabled items */
+  }
+  
+  .page-link {
+    cursor: pointer;
+  }
+  
+  /* Loading and Error States */
+  .attractions-loading {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .attractions-header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .attraction-card {
+      margin-bottom: 20px;
+    }
+  }

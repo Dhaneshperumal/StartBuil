@@ -19,15 +19,15 @@ import EventDetails from './components/events/EventDetails';
 import TransportationDashboard from './components/transportation/TransportationDashboard';
 import PRTTracking from './components/transportation/PRTTracking';
 import CourtesyCars from './components/transportation/CourtesyCars';
-// import MapView from './components/maps/MapView';
-// import POISearch from './components/maps/POISearch';
-// import SelfGuidedTour from './components/tours/SelfGuidedTour';
-// import FeedbackForm from './components/feedback/FeedbackForm';
+import MapView from './components/maps/MapView';
+import POISearch from './components/maps/POISearch';
+import SelfGuidedTour from './components/tours/SelfGuidedTour';
+import FeedbackForm from './components/feedback/FeedbackForm';
 
 // Admin Components
-// import UserManagement from './components/users/UserManagement';
-// import ContentManagement from './components/admin/ContentManagement';
-// import NotificationManager from './components/admin/NotificationManager';
+import UserManagement from './components/users/UserManagement';
+import ContentManagement from './components/admin/ContentManagement';
+import NotificationManager from './components/admin/NotificationManager';
 
 function App() {
   const { isAuthenticated, token, loading, user } = useAuth();
@@ -162,36 +162,36 @@ function App() {
             </PrivateRoute>
           } />
           
-          {/* <Route path="/tours/:id?" element={
+          <Route path="/tours/:id?" element={
             <PrivateRoute>
               <SelfGuidedTour />
             </PrivateRoute>
-          } /> */}
+          } />
           
-          {/* <Route path="/feedback" element={
+          <Route path="/feedback" element={
             <PrivateRoute>
               <FeedbackForm />
             </PrivateRoute>
-          } /> */}
+          } />
           
-          {/* Admin Routes
+          Admin Routes
           <Route path="/admin/users" element={
             <AdminRoute>
               <UserManagement />
             </AdminRoute>
-          } /> */}
+          } />
           
-          {/* <Route path="/admin/content" element={
+          <Route path="/admin/content" element={
             <AdminRoute>
               <ContentManagement />
             </AdminRoute>
-          } /> */}
+          } />
           
-          {/* <Route path="/admin/notifications" element={
+          <Route path="/admin/notifications" element={
             <AdminRoute>
               <NotificationManager />
             </AdminRoute>
-          } /> */}
+          } />
           
           {/* Catch-all route */}
           <Route path="*" element={<Navigate to="/dashboard" />} />

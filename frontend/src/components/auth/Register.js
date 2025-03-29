@@ -75,7 +75,7 @@ const Register = () => {
     try {
       setLoading(true);
       await register(formData);
-      navigate('/dashboard');
+      navigate('/login');
     } catch (err) {
       console.error('Registration error:', err);
       setError(err.message || 'Registration failed. Please try again.');

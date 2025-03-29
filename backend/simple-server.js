@@ -3,11 +3,14 @@ const http = require('http');
 const { WebSocketServer } = require('ws');
 const WebSocket = require('ws');
 const { Pool } = require('pg');
+const path = require('path');
 const app = express();
 const PORT = 5000;
 
 // Configure middleware
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../frontend/public')));
+app.use('/ws-test', express.static(path.join(__dirname, '../frontend/public')));
 
 // Database connection pool
 const pool = new Pool({
@@ -185,8 +188,13 @@ function broadcastMessage(message) {
 }
 
 // API routes
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('Smart City API is running');
+});
+
+// Serve the index.html for the root route
+app.get('/', (req, res) => {
+  res.sendFile('index.html', { root: path.join(__dirname, '../frontend/public') });
 });
 
 app.get('/health', (req, res) => {
@@ -530,6 +538,11 @@ async function startServer() {
     console.log(`WebSocket server running at ws://0.0.0.0:${PORT}/ws`);
   });
 }
+
+server.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+  testDatabaseConnection(); // <-- Call the function here!
+});
 
 startServer().catch(err => {
   console.error('Server startup error:', err);

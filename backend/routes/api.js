@@ -25,7 +25,8 @@ router.get('/docs', (req, res) => {
       feedback: '/api/feedback',
       notifications: '/api/notifications',
       maps: '/api/maps',
-      users: '/api/users'
+      users: '/api/users',
+      tour: '/api/tour'
     }
   });
 });

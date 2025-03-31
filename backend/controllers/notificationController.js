@@ -8,6 +8,7 @@ const config = require('../config/config');
 const admin = require('firebase-admin');
 const WebSocket = require('ws');
 
+
 // Initialize Firebase Admin SDK if FCM is configured
 if (config.notifications.fcmServerKey) {
   try {
@@ -23,9 +24,14 @@ if (config.notifications.fcmServerKey) {
   }
 }
 
+exports = module.exports
 // Get user notifications
 exports.getUserNotifications = async (req, res) => {
   try {
+    if (!req.user?.id) {
+      return res.status(401).json({ message: 'Unauthorized - User not authenticated' });
+    }
+
     // Pagination
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 20;
@@ -50,7 +56,8 @@ exports.getUserNotifications = async (req, res) => {
     const notifications = await Notification.find(filter)
       .sort({ createdAt: -1 })
       .skip(skip)
-      .limit(limit);
+      .limit(limit)
+      .lean(); // Add lean() for better performance
     
     // Get total count for pagination
     const total = await Notification.countDocuments(filter);
@@ -72,8 +79,11 @@ exports.getUserNotifications = async (req, res) => {
       }
     });
   } catch (err) {
-    console.error('Get user notifications error:', err.message);
-    res.status(500).json({ message: 'Server error' });
+    console.error('Get user notifications error:', err);
+    res.status(500).json({ 
+      message: 'Server error',
+      error: process.env.NODE_ENV === 'development' ? err.message : undefined
+    });
   }
 };
 

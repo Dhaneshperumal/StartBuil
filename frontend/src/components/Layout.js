@@ -30,10 +30,17 @@ const Layout = () => {
     try {
       setNotificationsLoading(true);
       const response = await getNotifications({ limit: 10 });
+      
+      if (!response) {
+        throw new Error('No response from server');
+      }
+      
       setNotifications(response.notifications || []);
       setUnreadCount(response.unreadCount || 0);
     } catch (error) {
       console.error('Error fetching notifications:', error);
+      // Optionally set an error state to display in your UI
+     console.log('Failed to load notifications. Please try again later.');
     } finally {
       setNotificationsLoading(false);
     }

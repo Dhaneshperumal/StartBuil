@@ -5,42 +5,30 @@ import { getMapConfig, getPointsOfInterest, getRoute } from './api';
 let mapConfig = null;
 
 // Initialize map with configuration
-export const initializeMap = async (mapContainerId, options = {}) => {
-  try {
-    // Get map configuration if not cached
-    if (!mapConfig) {
-      mapConfig = await getMapConfig();
-    }
-    
-    // Create map with default options
-    const map = L.map(mapContainerId, {
-      center: options.center || mapConfig.center,
-      zoom: options.zoom || mapConfig.zoom,
-      minZoom: mapConfig.minZoom,
-      maxZoom: mapConfig.maxZoom,
-      zoomControl: false, // Add custom zoom control below
-      ...options
-    });
-    
-    // Add zoom control to the bottom right
-    L.control.zoom({
-      position: 'bottomright'
-    }).addTo(map);
-    
-    // Add scale control
-    L.control.scale({
-      imperial: false,
-      position: 'bottomleft'
-    }).addTo(map);
-    
-    // Add default tile layer
-    addTileLayer(map, options.layer || mapConfig.defaultLayer);
-    
-    return map;
-  } catch (error) {
-    console.error('Failed to initialize map:', error);
-    throw error;
+export const initializeMap = async (container, options = {}) => {
+  // Check if container is an element or ID string
+  const mapContainer = typeof container === 'string' 
+    ? document.getElementById(container)
+    : container;
+
+  if (!mapContainer) {
+    throw new Error('Map container not found');
   }
+
+  // Ensure container has dimensions
+  if (mapContainer.offsetWidth === 0 || mapContainer.offsetHeight === 0) {
+    console.warn('Map container has zero dimensions - ensure CSS gives it size');
+  }
+
+  // Create map instance
+  const map = L.map(mapContainer, {
+    center: options.center || [39.6365, -79.9545],
+    zoom: options.zoom || 15,
+    minZoom: options.minZoom || 12,
+    maxZoom: options.maxZoom || 19
+  });
+
+  return map;
 };
 
 // Add tile layer to map

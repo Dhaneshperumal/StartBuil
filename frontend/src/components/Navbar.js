@@ -17,7 +17,6 @@ const Navbar = ({
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  // Handle toggling notifications dropdown
   const toggleNotifications = () => {
     if (!notificationsOpen && onRefreshNotifications) {
       onRefreshNotifications();
@@ -26,19 +25,16 @@ const Navbar = ({
     setUserMenuOpen(false);
   };
 
-  // Handle toggling user menu dropdown
   const toggleUserMenu = () => {
     setUserMenuOpen(!userMenuOpen);
     setNotificationsOpen(false);
   };
 
-  // Handle notification click
   const handleNotificationClick = (notification) => {
     if (onMarkAsRead && !notification.status.read) {
       onMarkAsRead(notification._id);
     }
 
-    // Handle navigation based on notification type
     if (notification.relatedTo) {
       const { type, id } = notification.relatedTo;
       
@@ -69,53 +65,52 @@ const Navbar = ({
     setNotificationsOpen(false);
   };
 
-  // Handle user logout
   const handleLogout = async () => {
     await logout();
     navigate('/login');
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div className="container-fluid">
+    <nav className="navbar navbar-horizontal navbar-dark bg-primary">
+      <div className="navbar-container">
+        {/* Sidebar toggle button */}
         <button 
-          className="navbar-toggler sidebar-toggler" 
-          type="button" 
+          className="sidebar-toggler" 
           onClick={toggleSidebar}
         >
-          <span className="navbar-toggler-icon"></span>
+          <i className="fas fa-bars"></i>
         </button>
         
+        {/* Brand logo */}
         <Link className="navbar-brand" to="/dashboard">
-          <i className="fas fa-city me-2"></i>
-          Smart City
+          <i className="fas fa-city"></i>
+          <span>Smart City</span>
         </Link>
         
-        <div className="ms-auto d-flex">
+        {/* Spacer to push items to the right */}
+        <div className="navbar-spacer"></div>
+        
+        {/* Navigation items - always horizontal */}
+        <div className="navbar-items">
           {user && (
             <>
               {/* Notifications */}
-              <div className="nav-item dropdown me-3 position-relative">
+              <div className="nav-item dropdown notifications-wrapper">
                 <button 
-                  className="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
-                  id="bd-theme"
-                  aria-expanded={notificationsOpen}
+                  className="nav-link notifications-btn"
                   onClick={toggleNotifications}
                 >
-                  <i className="fas fa-bell fs-5"></i>
+                  <i className="fas fa-bell"></i>
                   {unreadCount > 0 && (
-                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                      {unreadCount}
-                      <span className="visually-hidden">unread notifications</span>
-                    </span>
+                    <span className="notification-badge">{unreadCount}</span>
                   )}
                 </button>
                 
-                <div className={`dropdown-menu dropdown-menu-end notifications-dropdown ${notificationsOpen ? 'show' : ''}`}>
-                  <div className="dropdown-header d-flex justify-content-between align-items-center">
+                <div className={`dropdown-menu notifications-dropdown ${notificationsOpen ? 'show' : ''}`}>
+                  <div className="dropdown-header">
                     <span>Notifications</span>
                     <button 
-                      className="btn btn-sm btn-outline-secondary"
+                      className="refresh-btn"
                       onClick={(e) => {
                         e.stopPropagation();
                         onRefreshNotifications();
@@ -125,19 +120,17 @@ const Navbar = ({
                     </button>
                   </div>
                   
-                  <div className="notifications-container">
+                  <div className="notifications-list">
                     {notificationsLoading ? (
-                      <div className="text-center p-3">
-                        <div className="spinner-border spinner-border-sm text-primary" role="status">
-                          <span className="visually-hidden">Loading...</span>
-                        </div>
-                        <p className="mb-0 mt-2">Loading notifications...</p>
+                      <div className="loading-notifications">
+                        <div className="spinner"></div>
+                        <p>Loading notifications...</p>
                       </div>
                     ) : notifications.length > 0 ? (
                       notifications.map(notification => (
                         <button
                           key={notification._id}
-                          className={`dropdown-item notification-item ${!notification.status.read ? 'unread' : ''}`}
+                          className={`notification-item ${!notification.status.read ? 'unread' : ''}`}
                           onClick={() => handleNotificationClick(notification)}
                         >
                           <div className="notification-icon">
@@ -153,34 +146,30 @@ const Navbar = ({
                         </button>
                       ))
                     ) : (
-                      <div className="text-center p-3">
-                        <p className="mb-0">No notifications</p>
+                      <div className="empty-notifications">
+                        <p>No notifications</p>
                       </div>
                     )}
                   </div>
                   
-                  <div className="dropdown-divider"></div>
-                  <Link className="dropdown-item text-center" to="/notifications">
-                    View all notifications
-                  </Link>
+                  <div className="dropdown-footer">
+                    <Link to="/notifications">View all notifications</Link>
+                  </div>
                 </div>
               </div>
               
               {/* User Menu */}
-              <div className="nav-item dropdown">
+              <div className="nav-item dropdown user-menu-wrapper">
                 <button 
-                  className="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
-                  id="user-dropdown"
-                  aria-expanded={userMenuOpen}
+                  className="nav-link user-menu-btn"
                   onClick={toggleUserMenu}
                 >
-                  <span className="d-none d-lg-inline-block me-2">{user.firstName}</span>
+                  <span className="user-name">{user.firstName}</span>
                   <div className="user-avatar">
                     {user.avatar ? (
                       <img 
                         src={user.avatar} 
-                        alt={`${user.firstName} ${user.lastName}`} 
-                        className="rounded-circle"
+                        alt={`${user.firstName} ${user.lastName}`}
                       />
                     ) : (
                       <div className="avatar-placeholder">
@@ -190,14 +179,13 @@ const Navbar = ({
                   </div>
                 </button>
                 
-                <div className={`dropdown-menu dropdown-menu-end ${userMenuOpen ? 'show' : ''}`}>
-                  <div className="dropdown-header d-flex flex-column align-items-center">
-                    <div className="user-avatar-large mb-2">
+                <div className={`dropdown-menu user-dropdown ${userMenuOpen ? 'show' : ''}`}>
+                  <div className="user-profile">
+                    <div className="user-avatar-large">
                       {user.avatar ? (
                         <img 
                           src={user.avatar} 
-                          alt={`${user.firstName} ${user.lastName}`} 
-                          className="rounded-circle"
+                          alt={`${user.firstName} ${user.lastName}`}
                         />
                       ) : (
                         <div className="avatar-placeholder">
@@ -205,28 +193,26 @@ const Navbar = ({
                         </div>
                       )}
                     </div>
-                    <div className="user-info text-center">
-                      <div className="user-name">{user.firstName} {user.lastName}</div>
+                    <div className="user-info">
+                      <div className="user-fullname">{user.firstName} {user.lastName}</div>
                       <div className="user-email">{user.email}</div>
-                      <div className="user-role badge bg-info mt-1">
-                        {user.roles?.[0] || 'User'}
-                      </div>
+                      <div className="user-role">{user.roles?.[0] || 'User'}</div>
                     </div>
                   </div>
                   
                   <div className="dropdown-divider"></div>
                   
                   <Link className="dropdown-item" to="/profile">
-                    <i className="fas fa-user me-2"></i> Profile
+                    <i className="fas fa-user"></i> Profile
                   </Link>
                   <Link className="dropdown-item" to="/settings">
-                    <i className="fas fa-cog me-2"></i> Settings
+                    <i className="fas fa-cog"></i> Settings
                   </Link>
                   
                   <div className="dropdown-divider"></div>
                   
                   <button className="dropdown-item" onClick={handleLogout}>
-                    <i className="fas fa-sign-out-alt me-2"></i> Logout
+                    <i className="fas fa-sign-out-alt"></i> Logout
                   </button>
                 </div>
               </div>
@@ -238,25 +224,16 @@ const Navbar = ({
   );
 };
 
-// Helper function to get icon based on notification type
 function getNotificationIcon(type) {
   switch (type) {
-    case 'event':
-      return 'fa-calendar-alt';
-    case 'transportation':
-      return 'fa-bus';
-    case 'news':
-      return 'fa-newspaper';
-    case 'feedback':
-      return 'fa-comment-alt';
-    case 'incident':
-      return 'fa-exclamation-triangle';
-    case 'account':
-      return 'fa-user-circle';
-    case 'tour':
-      return 'fa-map-marked-alt';
-    default:
-      return 'fa-bell';
+    case 'event': return 'fa-calendar-alt';
+    case 'transportation': return 'fa-bus';
+    case 'news': return 'fa-newspaper';
+    case 'feedback': return 'fa-comment-alt';
+    case 'incident': return 'fa-exclamation-triangle';
+    case 'account': return 'fa-user-circle';
+    case 'tour': return 'fa-map-marked-alt';
+    default: return 'fa-bell';
   }
 }
 

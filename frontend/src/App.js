@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
 import { initializeWebSocket } from './services/websocket';
-
+import 'leaflet/dist/leaflet.css';
 // Layout Components
 import Layout from './components/Layout';
 
